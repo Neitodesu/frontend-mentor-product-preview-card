@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+:root {
+  --accent-color: hsl(158, 36%, 37%);
+  --hover-color: hsl(158, 51%, 18%);
+  --body-color: hsl(30, 38%, 92%);
+  --heading-color: hsl(212, 21%, 14%);
+  --text-color: hsl(228, 12%, 48%);
+  --card-color: hsl(0, 0%, 100%);
+  --ff-text: "Montserrat";
+  --ff-heading: "Fraunces";
+  --fw-text-500: 500;
+  --fw-text-700: 700;
+  --fw-heading-700: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background-color: var(--body-color);
+}
+body .product-card {
+  background-color: var(--card-color);
+  border-radius: 0.6em;
+  width: 342px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+body .product-card #main-img {
+  display: none;
+}
+body .product-card .card-details {
+  padding: 1em 1.5em;
+}
+body .product-card .card-details .product-name {
+  color: var(--text-color);
+  font-family: var(--ff-text);
+  font-weight: var(--fw-text-500);
+  font-size: 0.8rem;
+  letter-spacing: 0.2rem;
+  padding-bottom: 0.6em;
+}
+body .product-card .card-details .product-header {
+  color: var(--heading-color);
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-heading-700);
+  line-height: 1;
+  padding-bottom: 0.6em;
+}
+body .product-card .card-details .product-description {
+  color: var(--text-color);
+  font-family: var(--ff-text);
+  font-weight: var(--fw-text-500);
+  font-size: 0.875rem;
+  padding-bottom: 1em;
+}
+body .product-card .card-details .pricing {
+  color: var(--accent-color);
+  font-family: var(--ff-heading);
+  font-size: 2rem;
+  padding-bottom: 0.4em;
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
+body .product-card .card-details .pricing .old-price {
+  color: var(--text-color);
+  font-family: var(--ff-text);
+  font-weight: normal;
+  text-decoration: line-through;
+  font-size: 0.875rem;
+}
+body .product-card .card-details button {
+  border: 0;
+  color: var(--body-color);
+  background-color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1.2em 2em;
+  border-radius: 0.5em;
+  font-family: var(--ff-text);
+  font-weight: var(--fw-text-700);
+}
+body .product-card .card-details button:hover {
+  cursor: pointer;
+  background-color: var(--hover-color);
+}
+
+@media only screen and (min-width: 800px) {
+  body .product-card {
+    width: 600px;
+    height: 449px;
+    display: flex;
+  }
+  body .product-card #product-img {
+    display: none;
+  }
+  body .product-card #main-img {
+    display: block;
+  }
+  body .product-card .card-details {
+    padding: 0 2em;
+  }
+  body .product-card .card-details .product-name {
+    padding: 2em 0;
+  }
+  body .product-card .card-details .pricing {
+    padding-bottom: 0.8em;
+  }
+}/*# sourceMappingURL=main.css.map */
